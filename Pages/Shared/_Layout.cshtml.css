@@ -46,3 +46,20 @@ button.accept-policy {
   white-space: nowrap;
   line-height: 60px;
 }
+
+button {
+    background-color: #E02000;
+    color: white;
+    border-color: #E02000;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ,border 0.3s, transform 0.2s ease-out;
+}
+
+button:hover{
+    background-color: white;
+    color: #E02000;
+    border: white;
+
+}
+
+
