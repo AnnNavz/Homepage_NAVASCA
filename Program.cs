@@ -1,7 +1,12 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Homepage_NAVASCA.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<Homepage_NAVASCAContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Homepage_NAVASCAContext") ?? throw new InvalidOperationException("Connection string 'Homepage_NAVASCAContext' not found.")));
 
 var app = builder.Build();
 
