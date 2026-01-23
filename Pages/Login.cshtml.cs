@@ -13,13 +13,21 @@ namespace Homepage_NAVASCA.Pages
 
         public IActionResult OnPost()
         {
-            if (users.Username == "Admin" && users.Password == "Admin123!" && users.Email == "css.annshirleynavasca@gmail.com")
+            if (!ModelState.IsValid)
             {
-                return RedirectToPage("/Index");
-
+                return Page();
             }
 
-            return Page();
+            if (users.Username == "Admin" && users.Password == "Admin123!")
+            {
+                return RedirectToPage("/Index");
+            }
+            else
+            {
+                ModelState.AddModelError(string.Empty, "Invalid username or password.");
+
+                return Page();
+            }
         }
     }
 }

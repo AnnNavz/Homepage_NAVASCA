@@ -7,10 +7,6 @@ namespace Homepage_NAVASCA.Models
         [Key]
         public int UserId { get; set; }
 
-        [EmailAddress]
-        [Required]
-        public string Email { get; set; }
-
         [Required]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 20 characters.")]
         [RegularExpression(@"^[a-zA-Z0-9_]*$", ErrorMessage = "Only letters, numbers, and underscores are allowed.")]
