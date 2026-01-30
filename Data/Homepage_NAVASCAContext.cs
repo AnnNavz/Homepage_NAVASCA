@@ -15,5 +15,6 @@ namespace Homepage_NAVASCA.Data
         }
 
         public DbSet<Homepage_NAVASCA.Models.Product> Product { get; set; } = default!;
+        public DbSet<Homepage_NAVASCA.Models.Register> Register { get; set; } = default!;
     }
 }

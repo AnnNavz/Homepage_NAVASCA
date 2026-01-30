@@ -3,6 +3,7 @@ using Homepage_NAVASCA.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Homepage_NAVASCA.Migrations
 {
     [DbContext(typeof(Homepage_NAVASCAContext))]
-    partial class Homepage_NAVASCAContextModelSnapshot : ModelSnapshot
+    [Migration("20260130095917_Registers")]
+    partial class Registers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
